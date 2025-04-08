@@ -1,0 +1,31 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# flutter_clean_architecture.mdc
+
+description: "Mobile Guidelines for Constructoken using Flutter with Clean Architecture and DDD. This file specifies the project structure, UI interaction rules, state management, and testing practices for the mobile application."
+
+globs: "*.dart"
+
+auto_attachments:
+  - "/app"
+
+# Guidelines
+## 1. Expertise in Flutter & Clean Architecture
+- **Language & Comments:** Code (class names, function names, inline comments) must be in English, while high-level descriptions can be in Spanish.
+- **Design Principles:** Apply Clean Architecture and Domain-Driven Design (DDD) ensuring scalability and maintainability.
+
+## 2. Project Structure and Modules
+- **Layering:** Organize the project into Presentation, Domain, and Data layers.
+- **Modules:** Separate functionalities into modules such as UI management, API integration (with the FastAPI backend), and state handling.
+- **State Management:** Use recommended patterns (Provider, Bloc, or Riverpod) and prefix event functions with `handle` (e.g., `handleLogin`).
+
+## 3. Code Clarity and Reusability
+- **Constants & Abstraction:** Replace magic numbers with constants, and abstract reusable functionality into widgets and services.
+- **UI Design:** Follow Material Design principles and accessibility best practices (e.g., set `semanticLabel` for images and provide adequate feedback on interactions).
+
+## 4. Testing and Documentation
+- **Tests:** Write unit tests and widget tests for critical UI interactions and API communications.
+- **Documentation:** Include clear in-code comments in English outlining complex logic and architecture decisions.

@@ -1,0 +1,31 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# python_fastapi_guidelines.mdc
+
+description: "Backend Guidelines for Constructoken using Python, FastAPI & Pydantic. This file outlines coding standards, project structuring, error handling, and testing practices for the backend implementation."
+
+globs: "*.py"
+
+auto_attachments:
+  - "/backend"
+
+# Guidelines
+## 1. Expertise in Python & FastAPI
+- **Language & Comments:** Code (functions, variables, comments) must be in English. Documentation can be in Spanish.
+- **Async I/O:** Use `async def` for I/O-bound operations to avoid blocking.
+
+## 2. Project Flow and Functionalities
+- **Modular Structure:** Organize endpoints into modules (e.g., `auth`, `marketplace`, `projects`, `wallet`, `credits`).
+- **Key Functionalities:** Ensure implementations cover authentication, user management, integration with FINSUS, and order handling in the marketplace.
+
+## 3. Code Structure and Clarity
+- **Type Hints & Pydantic Models:** Incorporate type hints for function definitions and Pydantic for data validation and serialization.
+- **Error Handling:** Use early returns, guard clauses, and proper exceptions (HTTPException or custom error factories).
+- **Separation of Concerns:** Split business logic from endpoint definitions for clear, maintainable code.
+
+## 4. Testing and Documentation
+- **Unit & Integration Tests:** Utilize pytest and mocking libraries to test endpoints, validating flows like authentication, order processing, and external integrations.
+- **Documentation:** Add in-code documentation in English that explains function purposes, internal logic, and design choices.

@@ -1,0 +1,30 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# nextjs_guidelines.mdc
+
+description: "Frontend Guidelines for Constructoken using Next.js. This file outlines coding standards, component structuring, API integration, and testing practices for the Next.js web application."
+
+globs: "*.{ts,tsx,js,jsx}"
+
+auto_attachments:
+  - "/web"
+
+# Guidelines
+## 1. Expertise in Next.js
+- **Language & Comments:** Ensure all code (function names, variables, comments) is in English.
+- **Architecture:** Follow component-based architecture, keeping logic and UI separation clearly defined.
+
+## 2. Project Structure and Modules
+- **Folder Organization:** Maintain clear separation of components, pages, and API routes.
+- **Modular Code:** Divide the project into modules addressing different functionalities such as authentication, marketplace, projects, etc.
+
+## 3. Code Clarity and Reusability
+- **Reusability:** Write components that are modular and reusable. Avoid repetition by abstracting common logic.
+- **Best Practices:** Utilize early returns, proper state management, and error handling as needed.
+
+## 4. Testing and Documentation
+- **Testing:** Use Jest and React Testing Library for unit and integration tests.
+- **Documentation:** Document complex logic and design decisions in English to aid future maintenance.

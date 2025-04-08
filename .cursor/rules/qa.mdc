@@ -1,0 +1,40 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# qa_test_strategy.mdc
+
+# Description (Descripción general)
+description: "QA and Test Strategy for the Constructoken project. This file outlines the planning, execution, and evaluation guidelines for unit, integration, and end-to-end tests across backend and mobile platforms."
+# Auto attachments: define las carpetas o archivos donde aplicar estas reglas
+auto_attachments:
+  - Todo el proyecto
+
+# Guidelines (Pautas)
+## 1. Planning and Test Strategy
+- **Documentation Review:** Verify that all functionalities are documented in Memory Bank files (e.g., `project_brief.md`, `hoja_requerimientos.md`, `active_context.md`).
+- **Critical Flows:** Identify and document use cases and critical flows (authentication, order processing, wallet management, integration with FINSUS).
+
+## 2. Unit Testing
+- **Backend:** Use pytest with mocks to simulate database calls and external services. Test:
+  - Pydantic input validations.
+  - Correct error handling (early returns, HTTPException).
+  - Asynchronous functions to avoid blocking.
+- **Frontend/Mobile:** For Flutter, use widget and unit tests to check UI components and state management. For Next.js, employ Jest and React Testing Library.
+
+## 3. Integration Testing
+- **Module Communication:** Validate the communication between the backend and frontend/mobile via HTTP requests, ensuring proper token handling (JWT).
+- **Memory Bank Synchronization:** Confirm that invoking “initialize memory bank” or upon a refresh interval, the context is correctly updated in responses.
+
+## 4. End-to-End (E2E) Testing
+- **Full User Flow:** Simulate complete user journeys from registration/authentication to order processing and payment confirmation.
+- **Automation Tools:** Use tools like Cypress (web) or Flutter Driver (mobile) to automate these scenarios.
+
+## 5. Performance and Optimization Testing
+- **Load Testing:** Execute stress tests on key endpoints (authentication, order processing) and measure metrics like response time and throughput.
+- **Code Optimization:** Verify that asynchronous functions and early returns are optimally implemented to prevent bottlenecks.
+
+## 6. Feedback and Documentation
+- **Results Logging:** Record the outcomes, incidences, and improvement areas in dedicated Memory Bank files (e.g., `progress.md`).
+- **Peer Review:** Ensure senior developers review code changes and test results, aligning with DRY principles and proper commenting in English.
