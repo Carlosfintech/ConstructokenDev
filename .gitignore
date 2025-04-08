@@ -1,6 +1,42 @@
-.vscode
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencies
 node_modules/
+venv/
+.env/
+.venv/
+
+# Testing
 /test-results/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+coverage/
+
+# Build
+dist/
+build/
+out/
+
+# Logs
+*.log
+logs/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Cache
+__pycache__/
+.cache/
+.next/
+.dart_tool/

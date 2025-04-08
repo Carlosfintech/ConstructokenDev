@@ -4,12 +4,11 @@
 /node_modules
 /.pnp
 .pnp.js
-
-# Database
-*.db
+.yarn/install-state.gz
 
 # testing
 /coverage
+/.nyc_output
 
 # storybook
 storybook-static
@@ -21,14 +20,16 @@ storybook-static
 /playwright/.cache/
 
 # next.js
-/.next
-/out
+/.next/
+/out/
+.next/
 
 # cache
 .swc/
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
@@ -37,12 +38,15 @@ Thumbs.db
 
 # debug
 npm-debug.log*
-pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
 # local env files
 .env*.local
+.env
+.env.development
+.env.test
+.env.production
 
 # Sentry Config File
 .env.sentry-build-plugin
@@ -52,3 +56,21 @@ local
 
 # vercel
 .vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+logs
+*.log
+
+# Cache
+.cache/
+.temp/
